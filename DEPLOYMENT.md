@@ -1,6 +1,6 @@
-# TouchType Web - DigitalOcean Deployment Guide
+# KeyFlow - DigitalOcean Deployment Guide
 
-This guide will help you deploy the TouchType Web application on a DigitalOcean droplet with Docker.
+This guide will help you deploy the KeyFlow Web application on a DigitalOcean droplet with Docker.
 
 ## Prerequisites
 
@@ -228,7 +228,7 @@ docker compose exec mongodb mongodump \
   --out /data/backup
 
 # Copy backup from container
-docker cp touchtype-mongodb:/data/backup ./mongodb-backup-$(date +%Y%m%d)
+docker cp KeyFlow-mongodb:/data/backup ./mongodb-backup-$(date +%Y%m%d)
 ```
 
 ### Stop all services

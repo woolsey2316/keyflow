@@ -2,7 +2,7 @@ services:
   # MongoDB Database
   mongodb:
     image: mongo:7-jammy
-    container_name: touchtype-mongodb
+    container_name: keyflow-mongodb
     restart: unless-stopped
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME:-admin}
@@ -24,7 +24,7 @@ services:
     build:
       context: .
       dockerfile: ./server/Dockerfile
-    container_name: touchtype-backend
+    container_name: keyflow-backend
     restart: unless-stopped
     # Port only accessible internally through nginx
     expose:
@@ -70,7 +70,7 @@ services:
         GA_MEASUREMENT_ID: ${GA_MEASUREMENT_ID}
     env_file:
       - ./.env.prod
-    container_name: touchtype-frontend
+    container_name: keyflow-frontend
     restart: unless-stopped
     networks:
       - touchtype-network
@@ -78,7 +78,7 @@ services:
   # Nginx Reverse Proxy
   nginx:
     image: nginx:alpine
-    container_name: touchtype-nginx
+    container_name: keyflow-nginx
     restart: unless-stopped
     ports:
       - "80:80"

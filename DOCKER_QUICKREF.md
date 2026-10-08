@@ -1,4 +1,4 @@
-# TouchType Web - Docker Quick Reference
+# KeyFlow - Docker Quick Reference
 
 ## Local Development
 
@@ -48,8 +48,8 @@ docker compose down -v
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/yourusername/touchtype-web.git
-cd touchtype-web
+git clone https://github.com/woolsey2316/keyflow.git
+cd keyflow
 
 # 2. Configure environment
 cp .env.production .env
@@ -113,13 +113,13 @@ docker compose exec mongodb mongodump \
   --authenticationDatabase admin \
   --out /data/backup
 
-docker cp touchtype-mongodb:/data/backup ./backup-$(date +%Y%m%d)
+docker cp keyflow-mongodb:/data/backup ./backup-$(date +%Y%m%d)
 ```
 
 ### Restore MongoDB
 
 ```bash
-docker cp ./backup touchtype-mongodb:/data/restore
+docker cp ./backup keyflow-mongodb:/data/restore
 docker compose exec mongodb mongorestore \
   --username admin \
   --password your_password \
@@ -194,7 +194,7 @@ Required in `.env`:
 ## File Structure
 
 ```
-touchtype-web/
+keyflow/
 ├── app/                    # Frontend React app
 │   ├── Dockerfile         # Frontend container config
 │   └── .dockerignore      # Files to exclude from build

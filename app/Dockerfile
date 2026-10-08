@@ -24,7 +24,7 @@ RUN yarn install
 # Set build-time environment variables
 ARG API_ORIGIN
 ARG APP_ENV=production
-ARG APP_NAME=TouchType
+ARG APP_NAME=KeyFlow
 ARG APP_ORIGIN
 ARG GOOGLE_CLOUD_PROJECT
 ARG FIREBASE_APP_ID

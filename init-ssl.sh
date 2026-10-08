@@ -6,7 +6,7 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-echo -e "${GREEN}=== TouchType Web - SSL Certificate Setup ===${NC}\n"
+echo -e "${GREEN}=== KeyFlow - SSL Certificate Setup ===${NC}\n"
 
 # Check if domain is provided
 if [ -z "$1" ]; then
